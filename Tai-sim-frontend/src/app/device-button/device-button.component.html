@@ -1,0 +1,17 @@
+<mat-list-item class="list-item" role="button">
+  <button class="button-device"
+  [ngClass]="{
+    'last-button' : devicesListLength && index == devicesListLength! - 1,
+    'first-button' : index === 0,
+    'selected' : isSelected
+  }"
+  mat-stroked-button>
+    <div class="button-content">
+      <div class="button-text">
+        {{deviceData?.id}}: {{deviceData?.code}}
+      </div>
+      <div class="status-control" matTooltip="authorized" *ngIf="deviceData?.authorized"><mat-icon>done</mat-icon></div>
+    </div>
+    
+  </button>
+</mat-list-item>

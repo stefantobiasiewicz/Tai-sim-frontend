@@ -1,0 +1,59 @@
+@button-color: rgb(255 255 255 / 19%);
+@selected-button: #c5717180;
+
+span.mdc-button__label {
+    display: flex;
+    flex: 1;
+}
+
+> .mdc-button-label {
+    display: flex;
+  }
+
+.list-item {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    max-width: 100% !important;
+
+    
+    
+
+    .button-device {
+        width: 100%;
+        padding: 22px;
+        border-left: none;
+        border-right: none;
+        background-color: @button-color;
+        border-radius: 0px;
+        justify-content: flex-start;
+        display: flex;        
+        
+        .button-content {
+            display: flex;
+
+            .button-text {
+                display: flex;
+                align-self: center;
+                margin-right: 10px;
+            }
+
+            .status-control {
+                align-items: center;
+                display: flex;
+            }
+        }
+    }
+    .first-button {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .last-button {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .selected {
+        background-color: @selected-button;
+    }
+}

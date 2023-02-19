@@ -1,0 +1,18 @@
+<div class="list-container">
+  <div class="list">
+    <div class="list-title">Devices List</div>
+    <mat-list class="list-items" role="list">
+
+      <app-device-button
+      [index]="i"
+      [devicesListLength]="devicesList?.length"
+      [deviceData]="device"
+      class="item-wrapper"
+      [isSelected]="i === selectedDeviceIndex"
+      *ngFor="let device of devicesList; index as i;"
+      (click)="deviceChosen(i)">
+      </app-device-button> 
+
+    </mat-list>
+  </div>
+</div>

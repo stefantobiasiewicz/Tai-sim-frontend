@@ -1,0 +1,41 @@
+@green: rgba(66, 135, 77, 0.515);
+@button-color: rgb(255 255 255 / 19%);
+
+.list-container {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    background-color: @green;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 30px;
+    padding-right: 15px;
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .list-items {
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+
+            .item-wrapper {
+                display: flex;
+            }
+        }
+
+        .list-title {
+            font-size: 25px;
+            font-weight: bold;
+            padding-bottom: 20px;
+            color: white;
+        }
+
+        .solid {
+            border-top: 3px solid #bbb;
+        }
+    }
+    
+}

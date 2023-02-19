@@ -1,0 +1,46 @@
+@green: rgba(43, 89, 51, 0.904);
+@background: rgba(0, 0, 0, 0.247);
+.background {
+    background-color: @background;
+    height: 100%;
+    display: flex;
+
+    .app-container {
+        display: flex;
+        padding: 14px;
+        margin: 40px;
+        flex: 1;
+
+        .box-shadow {
+            box-shadow: 10px 5px 5px red;
+            display: flex;
+            flex: 1;
+            border-radius: 12px;
+            box-shadow: 15px 15px 30px #66696b95;
+        }
+    
+        .side-menu {
+            display: flex;
+            flex: 1;
+            border: 1px solid;
+            border-right: none;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            border-color: @green;
+            max-width: 260px;
+            overflow: hidden;
+        }
+    
+        .device-view {
+            display: flex;
+            flex: 3;
+            border: 1px solid;
+            align-items: stretch;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-left: none;
+            border-color: @green;
+            min-width: 300px;
+        }
+    }
+}
