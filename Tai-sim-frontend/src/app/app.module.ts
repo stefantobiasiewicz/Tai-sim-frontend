@@ -38,14 +38,18 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DeviceButtonComponent } from './device-button/device-button.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
+import { NotAuthorizedDeviceDetailsComponent } from './not-authorized-device-details/not-authorized-device-details.component';
+import { DeviceDetailsHeaderComponent } from './device-details-header/device-details-header.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [						
     AppComponent,
       DevicePanelComponent,
       DevicesListComponent,
       DeviceButtonComponent,
-      DeviceDetailsComponent
+      DeviceDetailsComponent,
+      NotAuthorizedDeviceDetailsComponent,
+      DeviceDetailsHeaderComponent
    ],
   imports: [
     HttpClientModule,

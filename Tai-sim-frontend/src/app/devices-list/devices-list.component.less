@@ -10,6 +10,7 @@
     border-bottom-left-radius: 10px;
     padding: 30px;
     padding-right: 15px;
+    min-width: 60px;
 
     .list {
         display: flex;
@@ -17,7 +18,14 @@
         flex: 1;
 
         .list-items {
-            overflow: scroll;
+            .list-items::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+
+
+            overflow-y: scroll;
             display: flex;
             flex-direction: column;
 

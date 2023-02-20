@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Device } from '../models/device';
 
 @Component({
@@ -27,5 +27,4 @@ export class DeviceButtonComponent implements OnInit {
   ngOnInit() {
     this.isAuthorized = this.deviceData?.authorized;
   }
-
 }

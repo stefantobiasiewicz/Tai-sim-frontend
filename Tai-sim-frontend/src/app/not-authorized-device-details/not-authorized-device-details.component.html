@@ -1,0 +1,20 @@
+<div class="container">
+  <app-device-details-header [device]="device"></app-device-details-header>
+  <div class="not-auth-message">
+    <div class="auth-info">
+      <div style="text-align: center;">
+        Device is not authorized.
+      </div>
+      
+      <div style="display: flex; justify-content: center;">
+        <button class="auth-button" (click)="authorize()" mat-raised-button>
+          authorize
+        </button>
+      </div>
+      
+      <div *ngIf="authorizeError" style="color:rgba(134, 27, 27, 0.816);">
+        {{authorizeErrorMsg}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,14 @@
-<p>
-  device-details works!
-</p>
+<div class="container">
+  <app-device-details-header [device]="device"></app-device-details-header>
+  <mat-card class="card-style">
+    <mat-card-header>
+      <mat-card-subtitle class="subtitle">MQTT</mat-card-subtitle>
+      <mat-icon class="icon">forum</mat-icon>
+    </mat-card-header>
+    
+    <mat-card-content class="strings">
+      <p>toDeviceTopic:</p>
+      <p>{{deviceStatus?.deviceMqtt?.toDeviceTopic}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

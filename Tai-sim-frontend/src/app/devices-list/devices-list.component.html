@@ -8,7 +8,7 @@
       [devicesListLength]="devicesList?.length"
       [deviceData]="device"
       class="item-wrapper"
-      [isSelected]="i === selectedDeviceIndex"
+      [isSelected]="i == selectedDeviceIndex!"
       *ngFor="let device of devicesList; index as i;"
       (click)="deviceChosen(i)">
       </app-device-button> 

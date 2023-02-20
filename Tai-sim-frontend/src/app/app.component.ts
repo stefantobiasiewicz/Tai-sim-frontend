@@ -25,8 +25,9 @@ export class AppComponent implements OnInit {
   }
 
   public deviceSelected(device: Device) {
-    this._router.navigate(["device-view", device.id]);
+    return device.authorized ?
+      this._router.navigate(["device-view", device.id])
+      : this._router.navigate(["no-auth-device-view", device.id]);
   }
-
 
 }
