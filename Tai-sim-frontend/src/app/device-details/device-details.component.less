@@ -7,6 +7,24 @@
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 10px;
+    border-radius: 10px;
+
+    .action-button {
+        flex: 1;
+    }
+
+    .blue {
+        background-color: #5b859b;
+    }
+
+    .green {
+        background-color: #81a386;
+    }
+
+    .topic {
+        display: flex;
+        gap: 5px;
+    }
 
     .subtitle {
         color: @blue;
@@ -20,14 +38,69 @@
     p {
         color: #434343;
     }
+
+    .form-device {
+        display: flex;
+        justify-content: space-around;
+        flex: auto;
+        gap: 30px;
+
+        .label-input {
+            color: #3f5b6b;
+        }
+
+        .input-style:focus {
+            border-color: #5c859c;
+            box-shadow: 0 0 0 0.25rem #5c859c57;
+        }
+        .input-style {
+            border-color: #5c859c;
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex: auto;
+        }
+
+        
+        
+    }
+}
+
+
+ :host::ng-deep .mat-focused :host::ng-deep .mat-form-field-label {
+    color: green !important;
+    font-size: 20px;
 }
 
 .mat-mdc-card-content {
     padding-top: 10px;
     display: flex;
     gap: 6px;
+    justify-content: space-around;
 }
 
 .mat-mdc-card-header {
     gap: 5px;
 }
+
+:host::ng-deep .mdc-form-field>label {
+    color: #3e5b6b;
+}
+
+:host::ng-deep .mat-mdc-slide-toggle.mat-accent {
+    --mdc-switch-selected-focus-state-layer-color: #8aafc4;
+    --mdc-switch-selected-handle-color: #8aafc4;
+    --mdc-switch-selected-hover-state-layer-color: #8aafc4;
+    --mdc-switch-selected-pressed-state-layer-color: #8aafc4;
+    --mdc-switch-selected-focus-handle-color: #8aafc4;
+    --mdc-switch-selected-hover-handle-color: #8aafc4;
+    --mdc-switch-selected-pressed-handle-color: #8aafc4;
+    --mdc-switch-selected-focus-track-color: #5c859c;
+    --mdc-switch-selected-hover-track-color: #5c859c;
+    --mdc-switch-selected-pressed-track-color: #5c859c;
+    --mdc-switch-selected-track-color: #5c859c;
+}
+

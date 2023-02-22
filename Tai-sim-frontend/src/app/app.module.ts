@@ -40,6 +40,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
 import { NotAuthorizedDeviceDetailsComponent } from './not-authorized-device-details/not-authorized-device-details.component';
 import { DeviceDetailsHeaderComponent } from './device-details-header/device-details-header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [						
@@ -52,6 +55,10 @@ import { DeviceDetailsHeaderComponent } from './device-details-header/device-det
       DeviceDetailsHeaderComponent
    ],
   imports: [
+    NgbModule,
+    MatSlideToggleModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
@@ -86,7 +93,7 @@ import { DeviceDetailsHeaderComponent } from './device-details-header/device-det
     MatTreeModule,
     OverlayModule,
     PortalModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

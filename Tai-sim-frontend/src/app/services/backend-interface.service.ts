@@ -30,4 +30,8 @@ export class BackendInterfaceService {
     return this._http.post<DeviceStatus>(this._url + '/device/authorize/' + deviceId, undefined);
   }
 
+  public setDeviceStatus(deviceStatus: DeviceStatus, deviceId: number): Observable<DeviceStatus> {
+    return this._http.post<DeviceStatus>(this._url + '/device/get/status/' + deviceId, deviceStatus);
+  }
+
 }

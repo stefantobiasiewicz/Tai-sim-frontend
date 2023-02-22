@@ -7,8 +7,94 @@
     </mat-card-header>
     
     <mat-card-content class="strings">
-      <p>toDeviceTopic:</p>
-      <p>{{deviceStatus?.deviceMqtt?.toDeviceTopic}}</p>
+      <div class="topic">
+        <p style="font-weight: 600;">toDeviceTopic:</p>
+        <p>{{deviceStatus?.deviceMqtt?.toDeviceTopic}}</p>
+      </div>
+      
+      <div class="topic">
+        <p style="font-weight: 600;">toServiceTopic:</p>
+        <p>{{deviceStatus?.deviceMqtt?.toServiceTopic}}</p>
+      </div>
     </mat-card-content>
   </mat-card>
+
+  <mat-card class="card-style">
+    <mat-card-header>
+      <mat-card-subtitle class="subtitle">Parameters</mat-card-subtitle>
+      <mat-icon class="icon">settings</mat-icon>
+    </mat-card-header>
+
+    <mat-card-content style="display: flex; flex-direction: column;">
+      <form class="form-device" [formGroup]="form!!">
+        <div class="form-column">
+          <div>
+            <label class="label-input" for="heaterSetTemp">heaterSetTemp</label>
+            <input class="form-control input-style" id="heaterSetTemp" type="number" formControlName="heaterSetTemp" [placeholder]="deviceStatus?.heaterSetTemp">
+          </div>
+  
+          <div>
+            <label class="label-input" for="temperature">temperature</label>
+            <input class="form-control input-style" id="temperature" type="number" formControlName="temperature" [placeholder]="deviceStatus?.temperature">
+          </div>
+        </div>
+        
+        <div class="form-column">
+          <div>
+            <label class="label-input" for="pressure">pressure</label>
+            <input class="form-control input-style" id="pressure" type="number" formControlName="pressure" [placeholder]="deviceStatus?.pressure">
+          </div>
+  
+          <div>
+            <label class="label-input" for="humidity">humidity</label>
+            <input class="form-control input-style" id="humidity" type="number" formControlName="humidity" [placeholder]="deviceStatus?.humidity">
+          </div>
+        </div>  
+      </form>
+
+      <hr class="hr" style="color: #5c859c;" />
+
+      <form class="form-device" [formGroup]="formToggles!!">
+        <div class="form-column">
+          <mat-slide-toggle id="lightOnOff" formControlName="lightOnOff" (toggleChange)="lightOnOff = !lightOnOff" [checked]="lightOnOff">lightOnOff</mat-slide-toggle>
+          <mat-slide-toggle id="doorsOpenClose" formControlName="doorsOpenClose" (toggleChange)="doorsOpenClose = ! doorsOpenClose" [checked]="doorsOpenClose">doorsOpenClose</mat-slide-toggle>
+        </div>
+
+        <div class="form-column">
+          <mat-slide-toggle id="heaterOnOff" formControlName="heaterOnOff" (toggleChange)="heaterOnOff = !heaterOnOff" [checked]="heaterOnOff">heaterOnOff</mat-slide-toggle>
+          <mat-slide-toggle id="fanOnOff" formControlName="fanOnOff" (toggleChange)="fanOnOff = !fanOnOff" [checked]="fanOnOff">fanOnOff</mat-slide-toggle>
+
+        </div>
+
+        <div class="form-column">
+          <mat-slide-toggle id="humidifierOnOff" formControlName="humidifierOnOff" (toggleChange)="humidifierOnOff = !humidifierOnOff" [checked]="humidifierOnOff">humidifierOnOff</mat-slide-toggle>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card-style"> 
+    <mat-card-header>
+      <mat-card-subtitle class="subtitle">Actions</mat-card-subtitle>
+      <mat-icon class="icon">offline_bolt</mat-icon>
+    </mat-card-header>
+    <mat-card-content style="display: flex;">
+      <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle class="action-button blue" value="on">Sync on <mat-icon>refresh</mat-icon></mat-button-toggle>
+        <mat-button-toggle class="action-button blue" value="off">Sync off</mat-button-toggle>
+      </mat-button-toggle-group> -->
+      <button class="action-button blue" mat-raised-button color="primary" (click)="refresh()">
+        refresh
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button class="action-button green" mat-raised-button color="primary" (click)="setParameters()">
+        set parameters
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  
+
 </div>
+
+

@@ -3,7 +3,7 @@
     <div class="header-first-part">
       Device:
     </div>
-    <div class="header-second-part">
+    <div class="header-second-part" *ngIf="device">
       {{device.id}}: {{device.code}}
     </div>
   </div>
